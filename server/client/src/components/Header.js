@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-//goal is to hook it up to store and then grab the auth state so it can know if the user is signed in or not
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import Payments from './Payments';
+import Payments from "./Payments";
 
 class Header extends Component {
   renderContent() {
@@ -17,12 +16,16 @@ class Header extends Component {
         );
       default:
         return [
-          <li key="1"><Payments /></li>,
-          <li key ="2" style={{margin: '0 1em'}}>Credits: {this.props.auth.credits}</li>,
+          <li key="1">
+            <Payments />
+          </li>,
+          <li key="2" style={{ margin: "0 1em" }}>
+            Credits: {this.props.auth.credits}
+          </li>,
           <li key="3">
             <a href="/api/logout">Logout</a>
-          </li>
-        ]
+          </li>,
+        ];
     }
   }
 

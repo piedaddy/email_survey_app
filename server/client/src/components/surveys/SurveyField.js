@@ -1,10 +1,7 @@
 import React from 'react';
 
-// class SurveyField extends Component {
-//   render
-// }
 
-function SurveyField({input, label, meta: {error, touched}}) { //pullls off input property with callbacks
+function SurveyField({input, label, meta: {error, touched}}) { 
   return (
     <div>
       <label>{label}</label>
